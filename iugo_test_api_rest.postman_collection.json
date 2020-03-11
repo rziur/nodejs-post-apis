@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "44a214c7-a365-405b-9099-2c273b64b096",
+		"name": "iugo_test_api_rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER_CREATE",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"tony\",\n    \"email\": \"tony@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "USER_LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_POST_TO_USER",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"manuel's post 3.0\",\n    \"body\": \"this is a post\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/user/5e61c238a3b1421b442ffc41",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"5e61c238a3b1421b442ffc41"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_LIST",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/post/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD_COMMENT_TO_A_POST",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"message\": \"this is another message\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/post/comment/5e61c2fda3b1421b442ffc4a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post",
+						"comment",
+						"5e61c2fda3b1421b442ffc4a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RETURN_ALL_POSTS_FROM_AN_USER",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/user/posts/5e61c1fea3b1421b442ffc3f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"posts",
+						"5e61c1fea3b1421b442ffc3f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST_GET_ONE_BY_ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/post/5e61c2e4a3b1421b442ffc47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post",
+						"5e61c2e4a3b1421b442ffc47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE_A_POST",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"MY POST UPDATED\",\n    \"body\": \"THIS IS MY POST UPDATED\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/post/5e61c2e4a3b1421b442ffc47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"post",
+						"5e61c2e4a3b1421b442ffc47"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
